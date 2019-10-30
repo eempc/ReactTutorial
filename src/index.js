@@ -5,9 +5,11 @@ import App from './App'; // App.js is being imported from here
 import * as serviceWorker from './serviceWorker';
 import globe from './images/browser-icon.png'; // How to import a static image
 import { isUserWhitespacable } from '@babel/types';
+import SomeComponentClass from './ComponentClass';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
+// An object and how to access it
 const user = {
     firstName: 'Ralph',
     lastName: 'Perez',
@@ -27,11 +29,19 @@ const childElements = (
     </div>
 );
 
+// This condition will render "Test" if the condition 5 > 1 is true
 const condition = (
    <div>{ 5 > 1 && <p>Test</p> }</div>
 );
 
 
+const greatestDivEver = React.createElement(
+    "div",
+    null,
+    "i am div"
+);
+
+// ArrayList to unordered list item
 const arrayList = [ 'apple', 'banana', 'clementine' ];
 const arrayListMapped = arrayList.map((item, i) =>
     <li key={'abc_' + i}>{item}</li>
@@ -90,7 +100,7 @@ function Hello() {
 }
 
 ReactDOM.render(<Hello />, document.getElementById('prop-test2'));
-
+ReactDOM.render(<SomeComponentClass />, document.getElementById('component-test'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
