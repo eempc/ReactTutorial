@@ -13,6 +13,14 @@ class SomeComponentClass extends React.Component {
         return 'Ralph';
     }
 
+    hoverFunction() {
+        //alert('stop!');
+    }
+
+    // add click event and use it to retrieve the button's ID
+    clickFunction(event) {
+        alert("clicked" + event.target.id);
+    }
 
     render() {
         const n = Math.floor(Math.random() * 10 + 1);
@@ -20,6 +28,8 @@ class SomeComponentClass extends React.Component {
         return (
             <div className={someObject.item2}>
                 <h1>Component class test {someObject.item1} and {n} and {this.name}</h1>
+                <div onMouseOver={this.hoverFunction}>Hover</div>
+                <button id="test-button" onClick={this.clickFunction}>Click</button>
             </div>
         );
     }
