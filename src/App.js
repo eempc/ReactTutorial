@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+// So this app returns an example of a rotating logo
 
 function App() {
   return (

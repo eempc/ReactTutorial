@@ -34,6 +34,12 @@ const condition = (
    <div>{ 5 > 1 && <p>Test</p> }</div>
 );
 
+// Ternary
+const ternary = (
+    <div>
+        { 5 > 1 ? 'cat' : 'dog' }
+    </div>
+);
 
 const greatestDivEver = React.createElement(
     "div",
